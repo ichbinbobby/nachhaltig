@@ -1,9 +1,11 @@
 <template>
   <v-app id="inspire">
     <v-app-bar>
-      <v-app-bar-nav-icon />
+      <v-app-bar-nav-icon color="primary" icon="mdi-leaf" />
 
-      <v-app-bar-title class="text-primary">Nachhaltig</v-app-bar-title>
+      <v-app-bar-title class="text-primary">
+        Nachhaltigkeits Leitfaden
+      </v-app-bar-title>
 
       <v-spacer />
 
