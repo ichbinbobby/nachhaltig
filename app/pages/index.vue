@@ -22,11 +22,11 @@
         </v-col>
       </v-row>
 
-      <v-list-subheader>Banking</v-list-subheader>
+      <page-heading id="#banking">Banking</page-heading>
 
       <v-row>
         <v-col>
-          <v-card @click="open(referals[0]!.link)">
+          <v-card id="#banking1" @click="open(referals[0]!.link)">
             <div class="d-flex flex-no-wrap justify-space-between">
               <div>
                 <v-card-title class="text-h5"> Tomorrow </v-card-title>
@@ -60,8 +60,10 @@
                 </v-card-text>
               </div>
 
-              <div style="width: 200px">
-                <v-img :src="referals[1]!.img" class="ma-4 app-img" />
+              <div>
+                <img :src="referals[1]!.img" width="200" />
+                <!-- v-img not working here -->
+                <!-- <v-img :src="referals[1]!.img" class="ma-4 app-img" /> -->
               </div>
             </div>
           </v-card>
@@ -99,8 +101,8 @@
       </v-row>
 
       <v-row>
-        <v-col v-for="n in 3" :key="n" cols="4">
-          <v-card height="200" color="background" />
+        <v-col>
+          <v-card id="#bottom" height="200" color="background" />
         </v-col>
       </v-row>
     </v-container>
