@@ -29,9 +29,11 @@
           <v-card id="#banking1" @click="open(referals[0]!.link)">
             <div class="d-flex flex-no-wrap justify-space-between">
               <div>
-                <v-card-title class="text-h5"> Tomorrow </v-card-title>
+                <v-card-title class="text-h5">
+                  {{ referals[0]!.title }}
+                </v-card-title>
 
-                <v-card-subtitle>{{ referals[0]!.title }}</v-card-subtitle>
+                <v-card-subtitle>{{ referals[0]!.subtitle }}</v-card-subtitle>
 
                 <v-card-text>
                   {{ referals[1]!.text }}
@@ -48,12 +50,12 @@
 
       <v-row>
         <v-col>
-          <v-card>
+          <v-card id="#banking2" @click="open(referals[1]!.link)">
             <div class="d-flex flex-no-wrap justify-space-between">
               <div>
                 <v-card-title class="text-h5"> Umweltbank </v-card-title>
 
-                <v-card-subtitle>{{ referals[1]!.title }}</v-card-subtitle>
+                <v-card-subtitle>{{ referals[1]!.subtitle }}</v-card-subtitle>
 
                 <v-card-text>
                   {{ referals[1]!.text }}
@@ -70,9 +72,29 @@
         </v-col>
       </v-row>
 
+      <page-heading id="#energy">Erneuerbare Energie</page-heading>
+
       <v-row>
-        <v-col v-for="n in 3" :key="n" cols="4">
-          <v-card height="200" color="success" />
+        <v-col>
+          <v-card id="#banking1" @click="open(referals[2]!.link)">
+            <div class="d-flex flex-no-wrap justify-space-between">
+              <div>
+                <v-card-title class="text-h5">
+                  {{ referals[2]!.title }}
+                </v-card-title>
+
+                <v-card-subtitle>{{ referals[2]!.subtitle }}</v-card-subtitle>
+
+                <v-card-text>
+                  {{ referals[2]!.text }}
+                </v-card-text>
+              </div>
+
+              <div style="width: 200px">
+                <v-img :src="referals[2]!.img" class="ma-4 app-img" />
+              </div>
+            </div>
+          </v-card>
         </v-col>
       </v-row>
 
