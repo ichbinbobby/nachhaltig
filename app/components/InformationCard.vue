@@ -14,7 +14,7 @@
       </div>
 
       <div style="width: 200px">
-        <v-img :src="img" class="ma-4 app-img" />
+        <v-img :src="img" color="white" rounded="xl" class="ma-4" />
       </div>
     </div>
   </v-card>
@@ -50,7 +50,7 @@ function open(link: string) {
 </script>
 
 <style scoped>
-.app-img > .v-img__img {
+.app-img > img {
   border-radius: 20%;
   background-color: white;
 }
