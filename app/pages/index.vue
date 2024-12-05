@@ -26,49 +26,25 @@
 
       <v-row>
         <v-col>
-          <v-card id="#banking1" @click="open(referals[0]!.link)">
-            <div class="d-flex flex-no-wrap justify-space-between">
-              <div>
-                <v-card-title class="text-h5">
-                  {{ referals[0]!.title }}
-                </v-card-title>
-
-                <v-card-subtitle>{{ referals[0]!.subtitle }}</v-card-subtitle>
-
-                <v-card-text>
-                  {{ referals[1]!.text }}
-                </v-card-text>
-              </div>
-
-              <div style="width: 200px">
-                <v-img :src="referals[0]!.img" class="ma-4 app-img" />
-              </div>
-            </div>
-          </v-card>
+          <information-card
+            id="#banking1"
+            :title="referals[0]!.title"
+            :subtitle="referals[0]!.subtitle"
+            :text="referals[0]!.text"
+            :img="referals[0]!.img"
+          />
         </v-col>
       </v-row>
 
       <v-row>
         <v-col>
-          <v-card id="#banking2" @click="open(referals[1]!.link)">
-            <div class="d-flex flex-no-wrap justify-space-between">
-              <div>
-                <v-card-title class="text-h5"> Umweltbank </v-card-title>
-
-                <v-card-subtitle>{{ referals[1]!.subtitle }}</v-card-subtitle>
-
-                <v-card-text>
-                  {{ referals[1]!.text }}
-                </v-card-text>
-              </div>
-
-              <div>
-                <img :src="referals[1]!.img" width="200" />
-                <!-- v-img not working here -->
-                <!-- <v-img :src="referals[1]!.img" class="ma-4 app-img" /> -->
-              </div>
-            </div>
-          </v-card>
+          <information-card
+            id="#banking2"
+            :title="referals[1]!.title"
+            :subtitle="referals[1]!.subtitle"
+            :text="referals[1]!.text"
+            :img="referals[1]!.img"
+          />
         </v-col>
       </v-row>
 
@@ -76,25 +52,13 @@
 
       <v-row>
         <v-col>
-          <v-card id="#banking1" @click="open(referals[2]!.link)">
-            <div class="d-flex flex-no-wrap justify-space-between">
-              <div>
-                <v-card-title class="text-h5">
-                  {{ referals[2]!.title }}
-                </v-card-title>
-
-                <v-card-subtitle>{{ referals[2]!.subtitle }}</v-card-subtitle>
-
-                <v-card-text>
-                  {{ referals[2]!.text }}
-                </v-card-text>
-              </div>
-
-              <div style="width: 200px">
-                <v-img :src="referals[2]!.img" class="ma-4 app-img" />
-              </div>
-            </div>
-          </v-card>
+          <information-card
+            id="#energy1"
+            :title="referals[2]!.title"
+            :subtitle="referals[2]!.subtitle"
+            :text="referals[2]!.text"
+            :img="referals[2]!.img"
+          />
         </v-col>
       </v-row>
 
@@ -133,15 +97,6 @@
 
 <script lang="ts" setup>
 import referals from "../../referals";
-
-function open(link: string) {
-  window.open(link, "_blank");
-}
 </script>
 
-<style>
-.app-img > .v-img__img {
-  border-radius: 20%;
-  background-color: white;
-}
-</style>
+<style></style>

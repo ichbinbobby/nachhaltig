@@ -1,5 +1,5 @@
 <template>
-  <v-card id="#banking1" @click="open(link)">
+  <v-card @click="open(link)">
     <div class="d-flex flex-no-wrap justify-space-between">
       <div>
         <v-card-title class="text-h5">
@@ -49,4 +49,9 @@ function open(link: string) {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.app-img > .v-img__img {
+  border-radius: 20%;
+  background-color: white;
+}
+</style>
